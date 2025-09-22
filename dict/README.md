@@ -7,6 +7,7 @@ This README is intended to guide users on how to rebuild synonyms dictionary by 
 ## Synonyms Dictionary
 Synonyms are used to expand search queries to include similar terms. The synonyms dictionary is a text file that contains a list of synonyms, with each line containing a list of equivalent terms separated by commas. The synonyms dictionary is used to expand search queries to include similar terms.
 <br>
+The synonyms dictionary is built by combining Sudachi synonyms dictionary with custom synonyms.
 
 ### Updating Sudachi Synonyms Dictionary
 1. Download the latest version of Sudachi synonyms dictionary from the [SudachiDict Repository](https://github.com/WorksApplications/SudachiDict/tree/develop/src/main/text).
@@ -32,4 +33,11 @@ You can modify the input and output file paths as needed according to your deplo
 ## Morphological Dictionary
 Morphological dictionaries are used to analyze and tokenize text data. The morphological dictionary is a text file that contains a list of words and their corresponding readings and parts of speech. The morphological dictionary is used to analyze and tokenize text data.
 <br>
-The morphological dictionary is built based on Solr format that is compatible with Kuromoji tokenizer for Japanese morphological analysis.
+The morphological dictionary uses Kuromoji tokenizer for morphological analysis and is built based on the format 
+that Kuromoji tokenizer can read.
+
+### Updating Custom Morphological Dictionary
+Custom morphological dictionaries can be maintained in separate files for different environments:
+- `prod_morphological.txt`: for production environment
+- `dev_morphological.txt`: for development and staging environment
+### Deploying (TBD)
